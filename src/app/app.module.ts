@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {InputComponent} from "./components/atoms/input/input.component";
+import { ButtonAuthenticatedComponent } from './components/atoms/button-authenticated/button-authenticated.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ButtonAuthenticatedComponent
   ],
     imports: [
         BrowserModule,

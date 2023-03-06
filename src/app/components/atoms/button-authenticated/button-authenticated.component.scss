@@ -1,0 +1,31 @@
+@mixin button-style {
+    padding: 20px;
+    border:none;
+}
+.button{
+    &__primary{
+        @include button-style;
+        background-color: burlywood;
+        color:black
+    }
+    &__primary:hover{
+        background-color:blue;
+        color:white
+    }
+    &__secondary{
+        @include button-style;
+        background-color:black;
+        color:white  
+    }
+    &__secondary:hover{
+        background-color:blue;
+    }
+    &__success{
+        @include button-style;
+        background-color:greenyellow;
+        color:white  
+    }
+    &__success:hover{
+        background-color:green;
+    }
+}
