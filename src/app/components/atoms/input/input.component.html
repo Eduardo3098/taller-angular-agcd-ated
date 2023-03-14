@@ -1,4 +1,6 @@
-<div class="container">
+<div class="container" [formGroup]="formGroup">
   <label class="container--label">PHONE NUMBER</label>
-  <input type="text">
+  <input class="container--input" placeholder="{{placeHolder}}" type="text">
+  <span class="container--error"  *ngIf="error" role="alert">{{messageError}}</span>
 </div>
+
