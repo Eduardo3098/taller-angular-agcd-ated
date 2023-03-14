@@ -1,6 +1,11 @@
 @mixin button-style {
     padding: 20px;
     border:none;
+    border-radius: 40px;
+    width: 70%
+}
+.container{
+
 }
 .button{
     &__primary{

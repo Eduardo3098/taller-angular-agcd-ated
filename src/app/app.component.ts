@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemaInputButton } from './enums/button-login.enum';
+import { LoginData } from './interface/data-login.interface';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,9 +9,8 @@ import { ThemaInputButton } from './enums/button-login.enum';
 export class AppComponent {
   title = 'taller-angular-agcd-ated';
   themaInput=ThemaInputButton
-  recibirRespuesta(e:any){
-    alert(e)
-
+  recibirRespuesta(e:LoginData){
+    alert(e.password)
   }
 }
 

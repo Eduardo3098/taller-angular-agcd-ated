@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ThemaInputButton } from '../../../enums/button-login.enum'
+import { LoginData } from '../../../interface/data-login.interface';
 @Component({
   selector: 'app-button-authenticated',
   templateUrl: './button-authenticated.component.html',
@@ -9,7 +10,9 @@ import { ThemaInputButton } from '../../../enums/button-login.enum'
 export class ButtonAuthenticatedComponent implements OnInit {
 @Input() thema:ThemaInputButton | undefined
 @Input() text:string | undefined
-@Output() valueLogin: EventEmitter<string>=new EventEmitter()
+  @Input()
+  DataLogin!: LoginData; 
+@Output() valueLogin: EventEmitter<LoginData>=new EventEmitter()
 themeInput=ThemaInputButton
 ngOnInit(): void {
    
@@ -17,8 +20,9 @@ ngOnInit(): void {
   constructor(){
     
   }
+  
   LoginUser(){
-    this.valueLogin.emit("login funcionando")
+    this.valueLogin.emit({...this.DataLogin})
   }
 }
 
