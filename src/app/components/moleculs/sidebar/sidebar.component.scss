@@ -4,11 +4,13 @@
     color: var(--light-gray-color);
     width: 300px;
     height: 100%;
-
+    background: black;
+    color:white;
     &__row{
         display: flex;
-       width: 100%;
+        width: 100%;
        align-items: center;
+    
     }
     &__row--selected{
         background-image: white;
